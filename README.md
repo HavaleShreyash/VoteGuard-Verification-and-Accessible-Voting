@@ -1,1 +1,12 @@
-# biometric-vote
+# Computerization of citizen verification process for voting and improving accessibility in voting system using biometric analysis
+
+![How the System Works?](/images/sys/sys_design.png "System Design")
+
+
+From the system design, we can see that at the beginning the user is asked to create an account and is given an option, if the user has an existing account, then after uploading the Aadhar ID, and registering their bio-metrics with the application, cross verifying the biometrics with the existing Aadhar database and set a login ID and password after which the account is created. If the user doesn't have an account, then the user is to provide Aadhar card, and check if the data in database is same as you. After successfully uploading the documents, users have to fill in their bio-metrics like face unlock and fingerprint and set a login ID and password after which the account is created and the system will check if the Aadhar number that is linked to the face is same as you or if a different party is trying to access your account. After creating the account by any method, the user is asked to set a 4-digit security pin which later will be used for authentication and verification.
+
+After account creation during the election period, the user is asked to log in with his/her login ID and password which will be stored in the dataset. If the user fails to login in the first 5 attempts there is a login delay introduced which will not allow the user to log in for the next 30 minutes and send an attempted login message to the mobile number and email that is registered with their Aadhar card.
+
+When the user successfully logs in, a list of candidates from his or her constituency is displayed, the information displayed will be the name of the candidate, party of the candidate, symbol of the party and image of the candidate. Now, when the user selects a specific candidate and clicks verify and confirm the user is directed to an un-skippable prompt that says either confirm with the secret pin we created at the beginning or input biometric data in and click confirm to cast their vote. If the user accidentally clicked on a candidate, the user can again go back to the candidate list and choose the appropriate candidate. If the user fails to enter the right code or biometric data within 10 minutes or enters the wrong data 5 consecutive times, the user is logged out by default.
+
+After the user votes for a selected candidate, the number of votes in the candidate's dataset is increased by 1 (basically a counter) and in the user dataset, user status changes from “not voted” to “voted” for users who have voted. And finally, after the elections, the votes for candidates are collected for result analysis and declaration.
