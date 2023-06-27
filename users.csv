@@ -1,0 +1,8 @@
+user_id,password,voting status
+u4567,pass1,1
+666,66,0
+1111,pass11,0
+u1111,pass2,0
+u1234,pass3,1
+u1234,pass,0
+u1234,pass4,0
